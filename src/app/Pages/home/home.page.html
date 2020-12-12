@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot=start>
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <img src='assets/DiBuy.png' class="toolimg">
+    <ion-buttons slot=end>
+    <ion-button (click)='loginmodal()' size='small' slot='end' fill=clear><ion-icon name ='people-outline'></ion-icon></ion-button>
+    <ion-button  (click)='cart()'  slot='end' fill='clear'><ion-icon name="cart-sharp"></ion-icon></ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true>
+  
+  <ion-searchbar
+    showcancelbutton
+    (ionInput)="filterlist($event)"
+  ></ion-searchbar>
+
+ 
+   <ion-grid class='grids'> 
+    
+      <ion-row>
+        
+             
+               <ion-col size-xs='6' size-sm='6' size-md='4' size-lg='3'*ngFor='let x of dumy2'>
+      
+             
+          <ion-card  class=cards> 
+    
+          
+            <ion-card-header (click)='viewitem(x)'>
+              <ion-img src={{x.imgurl}}></ion-img>
+               <ion-card-subtitle>{{x.CompanyName}}</ion-card-subtitle>
+              <ion-card-title color='primary'>{{x.ProductName}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                 <!-- <ion-label  *ngFor='let y of x.detail'>{{y.details}}:{{y.value}}<br/></ion-label> -->
+            </ion-card-content>
+            <ion-button size="small"><ion-icon name="add-circle-outline"></ion-icon><ion-icon name="cart-outline"></ion-icon></ion-button>
+            <ion-button size= small ><ion-icon name="add-circle-outline"></ion-icon>  Wishlist</ion-button>
+          </ion-card>
+          </ion-col>
+      </ion-row>
+   </ion-grid>
+
+   <ion-button (click)="openCam()" >Open Camera</ion-button>
+<img src="{{image}}">
+</ion-content>

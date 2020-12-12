@@ -1,0 +1,58 @@
+
+
+
+ion-toolbar{
+    font-size: 0pt;
+    ion-button{
+
+       padding: none;
+        ion-icon{
+            padding: none;
+            font-size: 20pt;
+        }
+    }
+}
+.cards{
+--background :wheat;
+--color :black;
+text-align: justify;
+padding:0px;
+margin: 0px;
+height: auto;
+ion-button{
+    
+   font-size: 6pt;
+}
+ion-card-subtitle{
+    
+    font-size: 5pt;
+    padding: 0px;
+    margin: 0px;
+}
+ion-card-title{
+    font-size: 7pt;
+    padding: 0px;
+    margin: 0px;
+}
+ion-card-header{
+    
+    padding: 0px;
+    margin: 0px;
+}
+img{
+    padding: 0px;
+    margin: 0px;
+}
+}
+
+.toolimg{
+    height: 50px;
+    width:100px;
+}
+/* .transbutton{
+    //background-color: rgba(0, 0, 0, 0);
+    border: solid 2px white;
+    border-radius: 30%;
+    fill: clear;
+    
+} */

@@ -1,0 +1,25 @@
+<ion-split-pane contentId='main'>
+  <ion-menu contentId='main'>
+    <ion-header>
+       <ion-toolbar>
+            <ion-title >
+              <ion-button fill='clear'(click)='home()'>
+                <ion-icon name = 'home'></ion-icon>
+              </ion-button>
+            </ion-title>
+       </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle auto-hide="false" *ngFor="let g of appMenu">
+         <ion-item  [routerDirection]="'root'" [routerLink]="[g.url]"> 
+          <ion-icon slot="start" [name]='g.icon'></ion-icon>
+          <ion-label>{{g.title}}</ion-label>
+         
+         </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+  </ion-menu>
+  <ion-router-outlet id='main'></ion-router-outlet>
+</ion-split-pane>

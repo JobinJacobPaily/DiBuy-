@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot=start>
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-title >Wishlist</ion-title>
+    <ion-button fill=clear slot="end" (click)='dismiss()' ><ion-icon name="close-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]='true'>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-thumbnail slot=start >
+            <ion-img  src='/assets/product.png'></ion-img>
+          </ion-thumbnail>
+           
+              <ion-col>
+                <h7>Mobile</h7>
+               </ion-col>
+               <ion-col>
+                <h7>9,889₹</h7>
+               </ion-col>
+       
+          <ion-button color='danger'><ion-icon name='trash'></ion-icon></ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

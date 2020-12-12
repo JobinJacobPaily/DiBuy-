@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot=start>
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-title>ViewItem</ion-title>
+    <ion-button fill=clear slot="end"  (click)='dismiss()' ><ion-icon name="close-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class='grids'> 
+    <ion-row>
+     
+      <ion-col >
+        <ion-card  class=cards> 
+  
+        
+          <ion-card-header >
+            <ion-img src={{dumy1.imgurl}}></ion-img>
+             <ion-card-subtitle>{{dumy1.CompanyName}}</ion-card-subtitle>
+            <ion-card-title color='primary'>{{dumy1.ProductName}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+                <ion-label  *ngFor='let y of dumy1.detail'>{{y.details}}:{{y.value}}<br/></ion-label> 
+          </ion-card-content>
+          <ion-button size="small" (click)='dismiss()'><ion-icon name="add-circle-outline"></ion-icon><ion-icon name="cart-outline"></ion-icon></ion-button>
+          <ion-button size= "small" (click)='dismiss()'><ion-icon name="add-circle-outline"></ion-icon>  Wishlist</ion-button>
+        </ion-card>
+      </ion-col>
+    
+    </ion-row>
+ </ion-grid>
+
+</ion-content>

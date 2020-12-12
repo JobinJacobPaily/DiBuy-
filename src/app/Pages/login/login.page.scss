@@ -1,0 +1,37 @@
+ion-input{
+    border: solid 1px rgb(70, 69, 69);
+    border-radius: 5%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    --background:rgb(255, 241, 214);
+    
+}
+.divider{
+   display: flex;
+   &:before,
+   &:after{
+       content: "";
+       flex:1;
+   }
+
+}
+.line{
+    align-items: center;
+    margin: 1em -1em;
+    color: #cccccc;
+  
+    &:before,
+    &:after{
+        height: 1px;
+       margin: 0 1em;
+    }
+
+
+}
+
+.one-line{
+    &:before,
+   &:after{
+       background: #cccccc;
+   }
+}

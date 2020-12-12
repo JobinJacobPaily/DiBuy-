@@ -1,0 +1,7 @@
+{
+  "name": "DiBuy",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
